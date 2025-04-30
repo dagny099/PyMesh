@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 
 # Import your dependency-mapper utilities
-from utils.dependency_mapper import (
+from pymesh.dependency_mapper import (
     discover_modules,
     extract_defined_functions,
     build_function_dependency_graph,

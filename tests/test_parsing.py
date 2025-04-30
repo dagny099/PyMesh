@@ -1,5 +1,5 @@
 import pytest
-from utils.dependency_mapper import extract_defined_functions, extract_dependencies
+from pymesh.dependency_mapper import extract_defined_functions, extract_dependencies
 from pathlib import Path
 
 def test_extract_defined_functions(tmp_path):

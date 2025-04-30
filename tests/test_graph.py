@@ -1,5 +1,5 @@
 import pytest
-from utils.dependency_mapper import ( build_dependency_graph, build_function_dependency_graph, discover_modules, extract_defined_functions)
+from pymesh.dependency_mapper import ( build_dependency_graph, build_function_dependency_graph, discover_modules, extract_defined_functions)
 from pathlib import Path
 
 def test_build_graph_simple(tmp_path):

@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import pytest
-from utils.dependency_mapper import discover_modules
+from pymesh.dependency_mapper import discover_modules
 
 def test_discover_modules(tmp_path):
     # Create a sample Python file structure
