@@ -2,7 +2,7 @@
 
 A **Streamlit-based** tool to analyze Python project dependencies at the function level, visualize them interactively with PyVis, and export structured graph data for further analysis (e.g., Neo4j ingestion).
 
-[![CI](https://github.com/dagny099/pymesh/actions/workflows/ci.yml/badge.svg)](https://github.com/dagny099/pymesh/actions/workflows/ci.yaml)
+[![CI](https://github.com/dagny099/pymesh/actions/workflows/ci.yml/badge.svg?branch=)](https://github.com/dagny099/pymesh/actions/workflows/ci.yaml)
 
 [![codecov](https://codecov.io/gh/dagny099/pymesh/branch/main/graph/badge.svg)](https://codecov.io/gh/dagny099/pymesh)
 
