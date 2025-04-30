@@ -1,9 +1,9 @@
-# Python Project Dependency Mapper
+# PyMesh: An Intuitive, Visual Dependency Mapper for Python Projects
 
 A **Streamlit-based** tool to analyze Python project dependencies at the function level, visualize them interactively with PyVis, and export structured graph data for further analysis (e.g., Neo4j ingestion).
 
 [![CI](https://github.com/dagny099/pymesh/actions/workflows/ci.yml/badge.svg)](https://github.com/dagny099/pymesh/actions)
-[![Coverage Status](https://codecov.io/gh/dagny099/pymesh/branch/main/graph/badge.svg)](https://codecov.io/gh/dagny099/pymesh)
+[![codecov](https://codecov.io/gh/dagny099/pymesh/branch/main/graph/badge.svg)](https://codecov.io/gh/dagny099/pymesh)
 
 ---
 
