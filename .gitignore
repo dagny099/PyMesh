@@ -1,0 +1,11 @@
+.env
+.envrc
+.venv
+.coverage
+coverage.xml
+__pycache__
+.DS_Store
+.ipynb_checkpoints
+*.pyc
+old
+
