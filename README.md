@@ -24,21 +24,18 @@ A **Streamlit-based** tool to analyze Python project dependencies at the functio
 
 ```
 .
-├── pyproject.toml           # Poetry-managed dependencies & scripts
-├── README.md                # This documentation
 ├── .gitignore               # Excludes venv, outputs, etc.
-├── streamlit_app.py         # Streamlit entry-point
+├── README.md                # This documentation
+├── pyproject.toml           # Poetry-managed dependencies & scripts
+├── app.py                   # Streamlit entry-point
 ├── style_config.py          # UI text & styling constants
-├── pymesh/       # Core library package
-│   ├── discover.py          # Module/file discovery logic
-│   ├── parsing.py           # AST-based parsing utilities
-│   ├── graph.py             # Graph-building functions
-│   └── utils.py             # Shared helpers
+├── utils/                   # Core library package
+│   ├── dependency_mapper.py # Module/file discovery logic
+│   ├── load_json_dep_map.cypher  # Cypher code to load Json into Neo4j using APOC
 ├── notebooks/               # Demo or exploratory notebooks
 │   └── Project Dependency Mapper.ipynb
 ├── tests/                   # Unit tests for each component
-├── docs/                    # Optional deeper documentation
-└── pymesh_outputs/  # Generated HTML & JSON exports
+└── outputs/  # Generated HTML & JSON exports
 ```
 
 Helpful Note: Run this command at the command prompt to generate a tree of your project:  
