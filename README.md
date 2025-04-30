@@ -35,6 +35,10 @@ A **Streamlit-based** tool to analyze Python project dependencies at the functio
 ├── notebooks/               # Demo or exploratory notebooks
 │   └── Project Dependency Mapper.ipynb
 ├── tests/                   # Unit tests for each component
+│   ├── test_discover.py     # Test
+│   ├── test_graph.py        # Test
+│   ├── test_parse.py        # Test
+│   ├── dependency_mapper.py # Module/file discovery logic
 └── outputs/  # Generated HTML & JSON exports
 ```
 
