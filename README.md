@@ -2,6 +2,9 @@
 
 A **Streamlit-based** tool to analyze Python project dependencies at the function level, visualize them interactively with PyVis, and export structured graph data for further analysis (e.g., Neo4j ingestion).
 
+[![CI](https://github.com/dagny099/pymesh/actions/workflows/ci.yml/badge.svg)](https://github.com/dagny099/pymesh/actions)
+[![Coverage Status](https://codecov.io/gh/dagny099/pymesh/branch/main/graph/badge.svg)](https://codecov.io/gh/dagny099/pymesh)
+
 ---
 
 ## 🚀 Features
@@ -26,7 +29,7 @@ A **Streamlit-based** tool to analyze Python project dependencies at the functio
 ├── .gitignore               # Excludes venv, outputs, etc.
 ├── streamlit_app.py         # Streamlit entry-point
 ├── style_config.py          # UI text & styling constants
-├── dependency_mapper/       # Core library package
+├── pymesh/       # Core library package
 │   ├── discover.py          # Module/file discovery logic
 │   ├── parsing.py           # AST-based parsing utilities
 │   ├── graph.py             # Graph-building functions
@@ -35,8 +38,11 @@ A **Streamlit-based** tool to analyze Python project dependencies at the functio
 │   └── Project Dependency Mapper.ipynb
 ├── tests/                   # Unit tests for each component
 ├── docs/                    # Optional deeper documentation
-└── dependency_mapper_outputs/  # Generated HTML & JSON exports
+└── pymesh_outputs/  # Generated HTML & JSON exports
 ```
+
+Helpful Note: Run this command at the command prompt to generate a tree of your project:  
+```tree  -I .DS_Store  -I '__pycache__' -L 2 -I old -I __init__.py```
 
 ---
 

@@ -1,11 +1,16 @@
 [tool.poetry]
-name = "dependency-mapping-tool"
+name = "pymesh"
 version = "0.1.0"
-description = "a tool to analyze Python project dependencies"
+description = "A Python dependency visualization and analysis tool developed to be intuitive and user-friendly"
 authors = ["Barbara <dagny099@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-package-mode = false
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -20,3 +25,11 @@ pytest-cov = "^6.1.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/pymesh"
+"Bug Tracker" = "https://github.com/yourusername/pymesh/issues"
+
+[project.scripts]
+pymesh = "pymesh.main:main"  # for a command-line interface
+
