@@ -25,25 +25,32 @@ A **Streamlit-based** tool to analyze Python project dependencies at the functio
 
 ```
 .
-├── .gitignore               # Excludes venv, outputs, etc.
+├── LICENSE.md
 ├── README.md                # This documentation
-├── pyproject.toml           # Poetry-managed dependencies & scripts
 ├── app.py                   # Streamlit entry-point
-├── style_config.py          # UI text & styling constants
-├── pymesh/                   # Core library package
-│   ├── dependency_mapper.py # Module/file discovery logic
-│   ├── load_json_dep_map.cypher  # Cypher code to load Json into Neo4j using APOC
+├── data/                    # Sample CSV data files
+├── dependency_mapper_outputs/  # Generated HTML & JSON exports
+├── json_to_csv.py           # Utility script for data conversion
 ├── notebooks/               # Demo or exploratory notebooks
 │   └── Project Dependency Mapper.ipynb
-├── tests/                   # Unit tests for each component
-│   ├── test_discover.py     # Test discover_modules
-│   ├── test_graph.py        # Test graph_dependencies
-│   ├── test_parse.py        # Test parse_internal_deps
-└── outputs/  # Generated HTML & JSON exports
+├── poetry.lock              # Poetry lock file
+├── pymesh/                  # Core library package
+│   ├── __init__.py
+│   ├── dependency_mapper.py # Module/file discovery logic
+│   └── load_json_dep_map.cypher  # Cypher code to load JSON into Neo4j
+├── pyproject.toml           # Poetry-managed dependencies & scripts
+├── style_config.py          # UI text & styling constants
+└── tests/                   # Unit tests for each component
+    ├── __init__.py
+    ├── test_discover.py     # Test discover_modules
+    ├── test_graph.py        # Test graph_dependencies
+    └── test_parsing.py      # Test parse_internal_deps
 ```
 
 Helpful Note: Run this command at the command prompt to generate a tree of your project:  
-```tree  -I .DS_Store  -I '__pycache__' -L 2 -I old -I __init__.py```
+```bash
+tree -I '__pycache__|.DS_Store|*.pyc' -L 3
+```
 
 ---
 
@@ -53,14 +60,14 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-org/python-project-dependency-mapper.git
-cd python-project-dependency-mapper
+git clone https://github.com/dagny099/pymesh.git
+cd pymesh
 
 # Install dependencies
 poetry install
 ```
 
-> **Note:** The default Python compatibility is `>=3.8`.
+> **Note:** The default Python compatibility is `>=3.11`.
 
 ---
 
@@ -69,7 +76,7 @@ poetry install
 ### 1. Run the Streamlit App
 
 ```bash
-poetry run streamlit run streamlit_app.py
+poetry run streamlit run app.py
 ```
 
 1. **Project Directory**: Enter the path to your Python project root.
@@ -107,7 +114,7 @@ Run unit tests with:
 poetry run pytest
 ```
 
-Tests are organized under the `tests/` directory, mirroring the `dependency_mapper/` package.
+Tests are organized under the `tests/` directory, mirroring the `pymesh/` package.
 
 ---
 
